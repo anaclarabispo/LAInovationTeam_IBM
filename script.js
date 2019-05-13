@@ -29,15 +29,16 @@ if (((funcName[2] == "Mary Jane WatsonParker") || (funcName[4] == "John Elvis Do
 
 /* Gera nome inicial do e-mail antes do @ */
 function montaMail(mails1, mails2) {
-  for (const j in mails1.ultiName) {
-    if (((funcName[2] == "Mary Jane WatsonParker") || (funcName[4] == "John Elvis Doe"))) {
-      aux.push(mails1.ultiName[j] + "." + mails1.priLetra[j] + "." + mails1.segLetra[j]);
-    } else {
-      aux.push(mails2.ultiName[j] + "." + mails2.priLetra[j]);
+    for (const j in mails1.ultiName) {
+      if (((funcName[j] == "Mary Jane WatsonParker") || (funcName[j] == "John Elvis Doe"))) {
+          aux.push(mails1.ultiName[j] + "." + mails1.priLetra[j] + "." + mails1.segLetra[j]);
+      } else {
+          aux.push(mails1.ultiName[j] + "." + mails1.priLetra[j]);
+      }
     }
+    return aux
   }
-  return aux
-}
+
 nomeMail = montaMail(mails1);
 
 /* Consolida o Nome + Dominio e verifica duplicidade de e-mails */
